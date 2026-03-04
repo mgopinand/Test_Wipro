@@ -1,0 +1,96 @@
+|--------------|
+|Azure DevOps: |
+|--------------|
+
+
+Why Azure Devops?
+---
+Azure DevOps is widely considered more famous and more preferred than many other DevOps platforms because it offers a complete, unified, enterprise‑grade DevOps ecosystem under one product. Azure DevOps provides everything in one place Boards (sprints, stories, user stories, backlog items), Repos, Pipelines, Atifacts, test plans. It has every DevOps tool in one platform (Coding → Building → Testing → Deploying → Monitoring).
+
+What is Application or Web Server?
+---
+An application/web server is a server specifically designed to run applications. It is a server to host applications.
+
+Ex: Tomcat
+
+What is DNS?
+---
+Domain Name System is used to map ip address to custom DNS so that we can access the application server with direct Domain name. We can buy DNS from GoDaddy
+
+|------------------------|
+| Azure CI/CD or Jenkins:|
+|------------------------|
+
+---> Continuous Integration(CI):
+Continuous Integration is a process of automating the build and testing of code every time a team member commits changes to version control.
+
+---> Continuous Delivery(CD):
+Continuous Delivery is a process to build, test, configure and Deploy to production environment
+
+---> In azure we write pipelines in yml format.
+
+
+Azure Pipelines:
+---
+---> Build Pipeline
+These pipeline jobs clone the code from assigned Repositories and build the project based on instructions provided i yml file. Typically we build pipelines to publish artifacts of the project.
+
+---> Release Pipeline:
+These pipeline are generally used to deploy the build artifacts into Agent Machine
+
+What are artifacts?
+---
+A WAR file is basically a ZIP file that contains your entire Java web application. Everything required to run your web application. Artifacts are what you deploy to servers like Tomcat, JBoss, WebLogic, Azure App Service, etc.
+
+
+|---------|
+|Jenkins: |
+|---------|
+---> Jenkins is basically written in Groovy script.
+# I use declarative pipeline for writing pipelines
+
+Difference b/w scripted pipeline and declarative Jenkins pipeline?
+---
+---> Scripted Pipeline use a Groovy-based scripting language to define pipeline logic, providing more flexibility and power but require more coding effort.
+
+---> Declarative Pipelines use simpler, more structured syntax for define pipelines make them easier to read, write and maintain.
+
+What is the purpose of Jenkins plugins?
+---
+
+---> Jenkins plugins extend the functionality of the Jenkins automation server by providing additional features, integrations and capabilities
+
+Ex: If we want to integrate with GitHub, Docker, SonarQube we have plugin.
+
+Explain Jenkins build triggers and how they work?
+---
+---> Triggers can be configured to start a build periodically like 15mins, 30mins (cron schedule)
+
+---> Git webhook when changes are pushed to version control system the pipeline has to trigger
+
+Which deployment strategy are you using in your organization?
+---
+# There are 2 types of developments 1) Blue Green Deployment 2) Canary Deployment
+
+---> Blue‑Green Deployment Strategy is a deployment method used to release new versions of applications with zero downtime and minimal risk.
+ 
+* Blue – the current live/production environment
+* Green – the new version of the application
+
+---> You deploy your new version to Green while users are still using Blue.
+Once the new version is fully tested and confirmed to be stable, you switch the traffic from Blue → Green. If something goes wrong, you can instantly roll back by routing traffic back to Blue.
+
+---> Canary Deployment is a deployment strategy where you release a new version of your application to a small percentage of users first, while the majority continue using the old version. This helps you test the new version in real production with minimal risk. If everything looks good → slowly increase traffic to the new version. If something breaks → rollback immediately.
+
+
+What is Jenkins Agent/Node and how does it works?
+---
+
+
+
+Docker:
+---
+---> Docker containers are light-weight in nature
+---> Docker doesn't need complete OS
+---> Docker provides isolation for containers.
+--->Docker is cloud neutral
